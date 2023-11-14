@@ -1,0 +1,32 @@
+<div class="register-page">
+  <div class="register-page__container">
+    <img class="register-page__logo" src="../../../assets/img/logo.svg" alt="" />
+    <div class="register-page__title">
+      <h1>Registration</h1>
+      <p>For Both Staff & Students</p>
+    </div>
+
+    <form class="register-page__form register-form" [formGroup]="registerForm">
+      <div class="register-form__item">
+        <label for="name">Name</label>
+        <input id="name" type="text" formControlName="name" />
+      </div>
+      <div class="register-form__item">
+        <label for="email">Email</label>
+        <input id="emai" type="email" formControlName="email" />
+      </div>
+      <div class="register-form__item">
+        <label for="password">Password</label>
+        <input id="password" type="password" formControlName="password" />
+      </div>
+      <div class="register-form__item">
+        <label for="confirmPassword">Confirm Password</label>
+        <input id="confirmPassword" type="password" formControlName="confirmPassword" />
+      </div>
+
+      <button class="register-form__button" type="submit">Register</button>
+    </form>
+
+    <p class="register-page__ref">Already a User? <a routerLink="/login">Login now</a></p>
+  </div>
+</div>

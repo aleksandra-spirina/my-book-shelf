@@ -1,0 +1,71 @@
+@import url('../../../assets/styles/colors.less');
+@import url('../../../assets/styles/fonts.less');
+
+.inputs-size() {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+
+  @media @xl {
+    padding: 12px;
+    border-radius: 6px;
+  }
+
+  @media @lg {
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  @media @md, @sm, @xs {
+    padding: 8px;
+    border-radius: 4px;
+  }
+}
+
+.form(@gap) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: @gap;
+}
+
+.form-item() {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+
+  @media @md, @sm, @xs {
+    font-size: 14px;
+  }
+
+  label {
+    font-weight: @bold-font-weight;
+  }
+
+  input {
+    .inputs-size();
+    border: 1px solid #dcd9d9;
+    font-weight: @standard-font-weight;
+  }
+}
+
+.form-button(@margin-top) {
+  .inputs-size();
+  font-size: 16px;
+  border: none;
+  font-weight: @bold-font-weight;
+  background-color: @orange-color;
+  color: @white-color;
+  margin-top: @margin-top;
+
+  @media @md, @sm, @xs {
+    font-size: 14px;
+    margin-top: @margin-top - 10px;
+  }
+
+  &:hover {
+    background-color: lighten(@orange-color, 5%);
+  }
+}

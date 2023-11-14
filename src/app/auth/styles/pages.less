@@ -1,0 +1,140 @@
+@import url('../../../assets/styles/colors.less');
+@import url('../../../assets/styles/fonts.less');
+@import url('../../../assets/styles/breakpoints.less');
+
+.page(@padding-bottom) {
+  padding: 63px 72px @padding-bottom 72px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px @shadow-color;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  background-color: @white-color;
+  font-family: @inter-font;
+  color: @main-text-color;
+
+  @media @xl {
+    padding: 50px 60px (@padding-bottom - 15px) 60px;
+  }
+
+  @media @lg {
+    padding: 45px 50px (@padding-bottom - 25px) 50px;
+  }
+
+  @media @md, @sm, @xs {
+    padding: 35px 45px (@padding-bottom - 35px) 45px;
+  }
+}
+
+.container() {
+  width: 428px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media @xl {
+    width: 320px;
+  }
+
+  @media @lg {
+    width: 290px;
+  }
+
+  @media @md {
+    width: 250px;
+  }
+
+  @media @sm, @xs {
+    width: 230px;
+  }
+}
+
+.logo() {
+  width: 150px;
+
+  @media @xl, @lg {
+    width: 140px;
+  }
+
+  @media @md, @sm, @xs {
+    width: 120px;
+  }
+}
+
+.title() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  @margin: 31px;
+  margin-top: @margin * 2;
+  margin-bottom: @margin;
+
+  @media @xl, @lg {
+    @margin: 25px;
+
+    margin-top: @margin * 2;
+    margin-bottom: @margin;
+
+    gap: 12px;
+  }
+
+  @media @md, @sm, @xs {
+    @margin: 22px;
+
+    margin-top: @margin * 2;
+    margin-bottom: @margin;
+
+    gap: 8px;
+  }
+
+  h1,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: @standard-font-weight;
+
+    @media @md {
+      font-size: 18px;
+    }
+
+    @media @sm, @xs {
+      font-size: 16px;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: @standard-font-weight;
+    color: @light-text-color;
+
+    @media @md {
+      font-size: 13px;
+    }
+
+    @media @sm, @xs {
+      font-size: 11px;
+    }
+  }
+}
+
+.ref(@margin-top) {
+  margin-top: @margin-top;
+  font-size: 16px;
+
+  @media @md, @sm, @xs {
+    font-size: 14px;
+  }
+
+  a {
+    color: @main-text-color;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,25 @@
+<div class="login-page">
+  <div class="login-page__container">
+    <img class="login-page__logo" src="../../../assets/img/logo.svg" alt="" />
+    <div class="login-page__title">
+      <h1>Welcome Back!</h1>
+      <p>Sign in to continue to your Digital Library</p>
+    </div>
+
+    <form class="login-page__form login-form" [formGroup]="loginForm">
+      <div class="login-form__item">
+        <label for="email">Email</label>
+        <input id="emai" type="email" formControlName="email" />
+      </div>
+
+      <div class="login-form__item">
+        <label for="password">Password</label>
+        <input id="password" type="password" formControlName="password" />
+      </div>
+
+      <button class="login-form__button" type="submit">Login</button>
+    </form>
+
+    <p class="login-page__ref">New User? <a routerLink="/register">Register Here</a></p>
+  </div>
+</div>
